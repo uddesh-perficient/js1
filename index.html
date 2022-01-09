@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
+    <title>Shopping items</title>
+
+
+    <style>
+        body {
+            background-color: rgb(201, 202, 202);
+            margin: 0 auto;
+           
+            text-align: center;
+        }
+        h1{
+            font-family: 'Licorice', cursive;
+            font-size: 4.5em;
+            padding-top: 100px;
+        }
+        input[type=text] {
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            padding: 20px 0px 20px 10px ;
+        }
+        input::placeholder{font-size: 1em;
+        font-style: italic;}
+
+
+        .btn {
+            margin-left: 20px;
+            font-size: 16px;
+            background-color: rgb(51, 51, 51);
+            padding: 10px 12px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover{
+            padding: 8px 12px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Check what Ashish was able to buy</h1>
+    <div>
+        <input type="text" placeholder="type the amount here" id="input">
+        <input type="submit" class="btn" value="Submit" onclick="submit()">
+        <input type="button" class="btn" value="Clear" onclick="clr()">
+    </div>
+</body>
+
+
+<script>
+
+    function submit() {
+        let amt = document.getElementById("input").value;
+        let a;
+        if (amt >= 35) {
+            a = amt - 35;
+            alert("Ashish purchased Grocery and Ice cream and the amount left with him now is " + a);
+        }
+        else if (amt === 20) {
+            alert("Ashish was only able to purchase Grocery with the given amount")
+        }
+        else if (amt === "") {
+            alert("Enter the amount first!");
+        }
+        else {
+            alert("Ashish wasn't able to purchase anything due to insuffient amount");
+        }
+    }
+
+function clr(){
+    return document.getElementById("input").value=" ";
+}
+
+</script>
+
+</html>
