@@ -1,1 +1,1 @@
-# js1
+Assignment 3 js in script.js file
