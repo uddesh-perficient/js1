@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <title>Assignment 3</title>
+    <style type="text/css">
+       
+       body{
+            margin: auto;
+            width: 80%;
+            background-color: rgb(255, 255, 255);
+        }
+        .container{
+            width: 60%;
+            margin: auto;
+        }
+        .form {
+            color: rgb(0, 0, 0);
+            text-align: left;
+            padding: 20px 40px;
+            border-radius: 7px;
+            margin: 50px 100px;
+            background-color:rgb(92, 92, 92);
+        }
+        h1{
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            letter-spacing: 3px;
+        }
+        .row{
+            padding-top: 5px;
+        }
+        input {
+            margin-bottom: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            font-family: 'Bebas Neue', cursive;;
+        }
+        
+        label{
+            letter-spacing: 1px;
+            color: white;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Oswald', sans-serif;
+        }
+        .output{
+            text-align: left;
+           margin-top:40px;  
+           background-color: white;  
+           border-radius: 10px;
+           padding: 0px 15px;
+        }
+        .output span{
+            color: black;
+            font-family: 'Oswald', sans-serif;
+            line-height:30px;
+            font-size: 20px;
+        }
+        #mybtn{
+          text-align: center;
+        }
+        button:hover{
+            background-color:cornflowerblue;
+            color: #ffff;
+        }
+        button[type="submit"]{
+           width:30%;
+           border: none;
+           font-size:18px;
+           padding:5px 0px;
+           border-radius:10px;
+            
+        }
+        input:hover{
+            background-color:#fdf9f969;
+        }
+        p{
+            color: black;
+            font-size: 25px;
+            font-family: 'Oswald', sans-serif;
+        }
+    </style>
+ 
+</head>
+
+<body>
+    <div class="container">
+        
+        
+        <div class="form">
+            <h1>Profile FORM</h1>
+            <label>Email-id : </label>
+           <div class="row"><input type="email" id="Email_id" placeholder="Enter your email"></div><br>
+            <label>First Name : </label>
+            <div class="row"><input type="text" id="first_name" placeholder=" Enter your first name"></div></br>
+            <label>Last Name : </label>
+            <div class="row"><input type="text" id="last_name" placeholder=" Enter your last name"></div></br>
+            <label>Age : </label>
+            <div class="row"><input type="number" name="age" id="age" placeholder=" Enter your age"></div>
+            <div id="mybtn">
+            <button type="submit" onclick="fetch()">SUBMIT</button>
+        </div>
+           
+        
+        <div class="output">
+                <p>The output will be displayed here</p>
+                <span>Email: <span id="emailid"></span></span><br>
+                <span>First name: <span id="firstname"></span></span><br>
+                <span>Last name: <span id="lastname"></span></span>
+             </div>
+        </div>
+        
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
